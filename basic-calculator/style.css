@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 400px;
+    margin: 30px auto;
+    border: solid 1px #ccc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.calculator:hover {
+    transform: scale(1.02);
+}
+
+#result {
+    width: 100%;
+    padding: 15px;
+    font-size: 32px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) inset;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: right;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #ddd;
+    transform: translateY(-2px);
+}
+
+.clear {
+    background-color: #ff4136;
+    color: #fff;
+}
+
+.number,
+.decimal {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.operator {
+    background-color: #0074d9;
+    color: #fff;
+}
+
+.equals {
+    background-color: #01ff70;
+    grid-row: span 3;
+    color: #fff;
+}
+
+.clock {
+    font-size: 32px;
+    /* اندازه بزرگتر برای ساعت */
+    text-align: center;
+    /* تراز به مرکز */
+    margin-bottom: 30px;
+    /* فاصله بیشتر از ماشین حساب */
+    color: #4a4a4a;
+    /* رنگ متن تیره‌تر */
+    font-family: 'Courier New', Courier, monospace;
+    /* فونت کلاسیک */
+    background-color: #f9f9f9;
+    /* رنگ پس‌زمینه روشن */
+    border: 2px solid #ccc;
+    /* حاشیه خاکستری */
+    border-radius: 10px;
+    /* گوشه‌های گرد */
+    padding: 10px;
+    /* فاصله داخلی */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* سایه برای عمق بیشتر */
+    width: 400px;
+    /* عرض ساعت */
+    margin: 40px auto 30px;
+    /* تراز به مرکز با فاصله از بالا */
+    letter-spacing: 1px;
+    /* فاصله بین حروف */
+}
