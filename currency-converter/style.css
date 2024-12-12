@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    /* برای کنترل بهتر اندازه‌ها */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, #ffcc00, #ff6699);
+    /* پس‌زمینه گرادیانت */
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    /* فونت مدرن */
+}
+
+.container {
+    background-color: rgba(0, 139, 139, 0.9);
+    /* پس‌زمینه با شفافیت */
+    color: #ffffff;
+    /* رنگ متن */
+    padding: 30px;
+    border-radius: 15px;
+    /* گوشه‌های گرد */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    /* سایه */
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    /* حداکثر عرض */
+}
+
+h1 {
+    font-size: 24px;
+    /* اندازه عنوان */
+    margin-bottom: 20px;
+    /* فاصله زیر عنوان */
+}
+
+.currency-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* چیدمان عمودی */
+    gap: 15px;
+    /* فاصله بین عناصر */
+}
+
+.currency-container select,
+.currency-container input {
+    padding: 15px;
+    border: none;
+    /* حذف حاشیه */
+    border-radius: 10px;
+    /* گوشه‌های گرد */
+    font-size: 18px;
+    /* اندازه متن */
+    color: #ffffff;
+    /* رنگ متن */
+    background-color: #00796b;
+    /* رنگ پس‌زمینه */
+    transition: background-color 0.3s ease;
+    /* انیمیشن تغییر رنگ */
+}
+
+.currency-container select:hover,
+.currency-container input:hover {
+    background-color: #004d40;
+    /* رنگ پس‌زمینه در حالت هاور */
+}
+
+.exchange-rate {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    /* فاصله بالای نرخ تبدیل */
+}
+
+select:focus,
+input:focus {
+    outline: none;
+    /* حذف حاشیه */
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    /* سایه در حالت فوکوس */
+}
+
+.last-updated {
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 10px;
+    transition: opacity 0.5s ease;
+}
