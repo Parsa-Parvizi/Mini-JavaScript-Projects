@@ -1,13 +1,11 @@
 const buttonsEl = document.querySelectorAll("button");
 const inputFieldEl = document.getElementById("result");
-const clockEl = document.getElementById("clock"); // عنصر ساعت
+const clockEl = document.getElementById("clock");
 
-// بارگذاری صداها
 const clickSound = new Audio('sounds/click-sound.mp3');
-const clearSound = new Audio('sounds/clear-sound.mp3');
+// const clearSound = new Audio('sounds/clear-sound.mp3');
 const equalsSound = new Audio('sounds/equals-sound.mp3');
 
-// تابع برای به‌روز کردن ساعت
 function updateClock() {
   const now = new Date();
   const hours = String(now.getHours()).padStart(2, '0');
@@ -16,27 +14,22 @@ function updateClock() {
   clockEl.textContent = `${hours}:${minutes}:${seconds}`;
 }
 
-// به‌روزرسانی ساعت هر ثانیه
 setInterval(updateClock, 1000);
 
-// اضافه کردن رویداد کلیک به دکمه‌ها
 for (let i = 0; i < buttonsEl.length; i++) {
   buttonsEl[i].addEventListener("click", () => {
     const buttonValue = buttonsEl[i].textContent;
 
-    // پخش صدای کلیک برای همه دکمه‌ها
-    clickSound.currentTime = 0; // برای جلوگیری از تکرار صدا
+    clickSound.currentTime = 0; 
     clickSound.play();
 
     if (buttonValue === "C") {
       clearResult();
-      // پخش صدای پاک کردن
-      clearSound.currentTime = 0; // برای جلوگیری از تکرار صدا
+      clearSound.currentTime = 0;
       clearSound.play();
     } else if (buttonValue === "=") {
       calculateResult();
-      // پخش صدای نتیجه
-      equalsSound.currentTime = 0; // برای جلوگیری از تکرار صدا
+      equalsSound.currentTime = 0;
       equalsSound.play();
     } else {
       appendValue(buttonValue);
@@ -56,5 +49,4 @@ function appendValue(buttonValue) {
   inputFieldEl.value += buttonValue;
 }
 
-// به‌روزرسانی اولیه ساعت
 updateClock();
