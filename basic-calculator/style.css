@@ -82,29 +82,16 @@ button:hover {
 
 .clock {
     font-size: 32px;
-    /* اندازه بزرگتر برای ساعت */
     text-align: center;
-    /* تراز به مرکز */
     margin-bottom: 30px;
-    /* فاصله بیشتر از ماشین حساب */
     color: #4a4a4a;
-    /* رنگ متن تیره‌تر */
-    font-family: 'Courier New', Courier, monospace;
-    /* فونت کلاسیک */
+    font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
-    /* رنگ پس‌زمینه روشن */
     border: 2px solid #ccc;
-    /* حاشیه خاکستری */
     border-radius: 10px;
-    /* گوشه‌های گرد */
     padding: 10px;
-    /* فاصله داخلی */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    /* سایه برای عمق بیشتر */
     width: 400px;
-    /* عرض ساعت */
     margin: 40px auto 30px;
-    /* تراز به مرکز با فاصله از بالا */
     letter-spacing: 1px;
-    /* فاصله بین حروف */
 }
