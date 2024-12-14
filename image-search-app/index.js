@@ -9,17 +9,14 @@ const loadingSpinnerEl = document.getElementById("loading-spinner");
 let inputData = "";
 let page = 1;
 
-// تابع برای نمایش بارگذاری
 function showLoading() {
   loadingSpinnerEl.style.display = "block";
 }
 
-// تابع برای پنهان کردن بارگذاری
 function hideLoading() {
   loadingSpinnerEl.style.display = "none";
 }
 
-// تابع برای ذخیره تاریخچه جستجو
 function saveSearchHistory(query) {
   let history = JSON.parse(localStorage.getItem("searchHistory")) || [];
   if (!history.includes(query)) {
@@ -30,12 +27,12 @@ function saveSearchHistory(query) {
 
 async function searchImages() {
   inputData = searchInputEl.value;
-  showLoading(); // نمایش بارگذاری
+  showLoading();
   const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`;
 
   const response = await fetch(url);
   const data = await response.json();
-  hideLoading(); // پنهان کردن بارگذاری
+  hideLoading();
 
   if (page === 1) {
     searchResultsEl.innerHTML = "";
@@ -60,32 +57,26 @@ async function searchImages() {
       searchResultsEl.appendChild(imageWrapper);
     });
 
-    // نمایش دکمه "Show More" اگر نتایج وجود داشته باشد
     showMoreButtonEl.style.display = "block";
   } else {
-    // اگر نتایج وجود نداشته باشد، دکمه را پنهان کنید
     showMoreButtonEl.style.display = "none";
   }
 
   page++;
 
-  // ذخیره تاریخچه جستجو
   saveSearchHistory(inputData);
 }
 
-// رویداد برای ارسال فرم
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
   page = 1;
   searchImages();
 });
 
-// رویداد برای دکمه "Show More"
 showMoreButtonEl.addEventListener("click", () => {
   searchImages();
 });
 
-// بارگذاری تاریخچه جستجو
 function loadSearchHistory() {
   const history = JSON.parse(localStorage.getItem("searchHistory")) || [];
   history.forEach((query) => {
@@ -101,5 +92,4 @@ function loadSearchHistory() {
   });
 }
 
-// بارگذاری تاریخچه جستجو در بارگذاری صفحه
 loadSearchHistory();
