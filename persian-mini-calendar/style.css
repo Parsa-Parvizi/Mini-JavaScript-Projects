@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Vazir', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.calendar-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.month-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.current-date {
+    margin: 20px 0;
+}
+
+.day-name {
+    font-size: 18px;
+    color: darkgray;
+}
+
+.day-number {
+    font-size: 60px;
+    margin: 0;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.year {
+    font-size: 18px;
+    color: darkgray;
+}
+
+.days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+.day:hover {
+    background-color: #d0d0d0;
+}
+
+.event-container {
+    margin-top: 20px;
+}
+
+.event-container input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.event-container button {
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.events {
+    margin-top: 10px;
+    text-align: left;
+}

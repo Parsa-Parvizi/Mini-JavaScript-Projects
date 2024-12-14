@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تقویم فارسی</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="calendar-container">
+        <button id="prev-month">ماه قبل</button>
+        <p class="month-name" id="month-name">فروردین</p>
+        <button id="next-month">ماه بعد</button>
+        <select id="year-select"></select>
+        <p class="day-name" id="day-name">شنبه</p>
+        <p class="day-number" id="day-number">1</p>
+        <p class="year" id="year">1402</p>
+        <div class="days-container" id="days-container"></div>
+        <div class="event-container">
+            <input type="text" id="event-input" placeholder="رویداد جدید..." />
+            <button id="add-event">اضافه کردن رویداد</button>
+            <div class="events" id="events"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
