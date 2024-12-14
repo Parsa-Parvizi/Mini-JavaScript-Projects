@@ -12,7 +12,6 @@ h1 {
   margin-top: 40px;
   margin-bottom: 60px;
   color: #333;
-  /* رنگ متن عنوان */
 }
 
 form {
@@ -32,14 +31,11 @@ form {
   font-size: 18px;
   color: #333;
   transition: box-shadow 0.3s ease-in-out;
-  /* انیمیشن برای سایه */
 }
 
 #search-input:focus {
   outline: none;
-  /* حذف outline پیش‌فرض */
   box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
-  /* سایه در حالت فوکوس */
 }
 
 #search-button {
@@ -52,13 +48,11 @@ form {
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out, transform 0.2s;
-  /* انیمیشن برای تغییر رنگ و مقیاس */
 }
 
 #search-button:hover {
   background-color: #3e8e41;
   transform: scale(1.05);
-  /* بزرگ شدن دکمه در حالت هاور */
 }
 
 .search-results {
@@ -77,12 +71,10 @@ form {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  /* انیمیشن برای بزرگ شدن */
 }
 
 .search-result:hover {
   transform: scale(1.02);
-  /* بزرگ شدن در حالت هاور */
 }
 
 .search-result img {
@@ -150,34 +142,23 @@ form {
 .search-history {
   display: flex;
   flex-direction: column;
-  /* قرارگیری عمودی */
   margin-top: 20px;
   align-items: center;
-  /* مرکز قرار دادن آیتم‌ها */
 }
 
 .search-history-item {
   background-color: #ffffff;
-  /* رنگ پس‌زمینه سفید */
   border-radius: 5px;
   padding: 10px 15px;
-  /* افزایش padding برای فضای بیشتر */
   margin: 10px;
-  /* افزایش فاصله بین آیتم‌ها */
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  /* انیمیشن برای تغییر رنگ و سایه */
   width: 100%;
-  /* عرض کامل برای هر آیتم */
   max-width: 400px;
-  /* حداکثر عرض برای جلوگیری از بزرگ شدن بیش از حد */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* سایه برای عمق بیشتر */
 }
 
 .search-history-item:hover {
   background-color: #f0f0f0;
-  /* رنگ پس‌زمینه در حالت هاور */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  /* سایه بیشتر در حالت هاور */
 }
