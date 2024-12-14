@@ -20,8 +20,7 @@ const persianMonths = [
 const persianDays = ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنجشنبه", "جمعه"];
 
 function updateCalendar() {
-    // به‌روزرسانی تاریخ جاری
-    currentDate.setFullYear(currentYear, currentMonth, 1); // تنظیم تاریخ به اولین روز ماه جاری
+    currentDate.setFullYear(currentYear, currentMonth, 1);
 
     const persianDate = new Intl.DateTimeFormat('fa-IR', {
         year: 'numeric',
@@ -43,7 +42,7 @@ function updateCalendar() {
 
 function renderDays() {
     daysContainer.innerHTML = '';
-    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate(); // تعداد روزهای ماه جاری
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
     for (let i = 1; i <= daysInMonth; i++) {
         const dayDiv = document.createElement('div');
         dayDiv.className = 'day';
@@ -118,6 +117,5 @@ function loadEvents() {
     });
 }
 
-// بارگذاری رویدادها در بارگذاری اولیه
 loadEvents();
 updateCalendar();
