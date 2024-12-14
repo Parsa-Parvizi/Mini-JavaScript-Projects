@@ -5,20 +5,14 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #f5f5f5;
-    /* رنگ پس‌زمینه روشن‌تر */
     font-family: 'Arial', sans-serif;
-    /* استفاده از فونت مدرن‌تر */
 }
 
 .container {
     background-color: rgba(255, 255, 255, 0.9);
-    /* پس‌زمینه سفید با شفافیت کم */
     padding: 40px;
-    /* افزایش padding برای فضای بیشتر */
     border-radius: 10px;
-    /* گوشه‌های گردتر */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    /* سایه ملایم‌تر */
     width: 90%;
     margin: 10px;
     max-width: 450px;
@@ -29,40 +23,27 @@ body {
 
 .heading {
     font-size: 32px;
-    /* افزایش اندازه عنوان */
     margin-bottom: 20px;
-    /* فاصله بیشتر از محتوا */
     color: #333;
-    /* رنگ تیره‌تر برای خوانایی بهتر */
 }
 
 .input {
     height: 50px;
-    /* کمی کاهش ارتفاع */
     width: 90%;
-    /* استفاده از عرض کامل */
     background-color: rgba(255, 255, 255, 0.8);
-    /* پس‌زمینه روشن‌تر */
     border: 1px solid rgba(0, 0, 0, 0.2);
-    /* حاشیه ملایم */
     font-size: 16px;
     padding: 0 20px;
-    /* کاهش padding */
     border-radius: 5px;
     transition: border-color 0.3s;
-    /* انیمیشن ملایم برای تغییر حاشیه */
 }
 
 .input:focus {
     outline: none;
-    /* حذف outline پیش‌فرض */
     border-color: #007BFF;
-    /* تغییر رنگ حاشیه در حالت فوکوس */
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    /* سایه ملایم در حالت فوکوس */
 }
 
 .meaning-container {
     display: none;
-    /* این بخش را می‌توان به دلخواه نمایش داد */
 }
