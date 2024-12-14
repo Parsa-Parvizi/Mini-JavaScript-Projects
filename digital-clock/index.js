@@ -31,7 +31,6 @@ function updateClock() {
   minuteEl.innerText = m;
   secondEl.innerText = s;
 
-  // نمایش AM/PM فقط در فرمت 12 ساعته
   ampmEl.innerText = is24HourFormat ? "" : ampm;
 
   dateEl.innerText = now.toLocaleDateString();
